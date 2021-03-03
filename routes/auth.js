@@ -13,19 +13,19 @@ const UserModel = require ("./../model/User");
 
 router.get("/signin", (req,res, next)=>{
 
-    res.render('/auth/signin.hbs');
+    res.render('auth/signin.hbs');
 
 });
 router.get("/signup", (req,res, next)=>{
 
-    res.render('/auth/signup.hbs');
+    res.render('auth/signup.hbs');
 
 });
 
 router.get( "/signout", (req, res, next)=> { 
  req.session.destroy(function (err)
  {
-     res.redirect("/auth/signin");
+     res.redirect("auth/signin");
  });
 });
 
@@ -34,7 +34,7 @@ router.post("/signin", async (req, res, next) => {
     // DO something
     //   res.render("auth/signin.hbs");
     const { email, password } = req.body;
-    const foundUser = await User.findOne({ email: email });
+    const foundUser = await UserModel.findOne({ email: email });
   
     if (!foundUser) {
       //   Display an error message telling the user that either the password
