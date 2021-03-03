@@ -62,7 +62,7 @@ app.use("/dashboard/artist", artistRouter); // use artist router
 app.use("/dashboard/album", albumRouter); // use album router
 app.use("/dashboard/label", labelRouter); // use label router
 app.use("/dashboard/style", styleRouter); // use style router
-app.use("/dashboard/auth", authRouter); // se auth router
+app.use("/auth", authRouter); // se auth router
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
