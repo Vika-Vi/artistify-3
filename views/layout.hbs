@@ -20,8 +20,8 @@
       {{#unless isLoggedIn}}
       <a href="/auth/signin" class="link">| <i class="fa fa-user fa-1x"></i></a>
       {{/unless}}
-      {{#if isLoggedIn}}
       <a class="link" href="/dashboard">| <i class="fa fa-user fa-1x"></i></a>
+      {{#if isLoggedIn}}
       <a class="link" href="/auth/signout">signout</a>
       {{/if}}
     </nav>
